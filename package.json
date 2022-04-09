@@ -1,0 +1,27 @@
+{
+  "name": "sinpie",
+  "version": "1.0.2",
+  "type": "module",
+  "description": "A tiny library i made for fun to automate updating your discord server with lewd stuff",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "nsfw",
+    "anime",
+    "boobs",
+    "ass",
+    "lewd",
+    "discord",
+    "nodejs"
+  ],
+  "repository": {
+    "url": ""
+  },
+  "author": "ilovebewbs",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
