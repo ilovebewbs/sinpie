@@ -30,6 +30,9 @@ import Boobs from "sinpie/src/boobs/Boobs.js";
 
 const tiddy = new Boobs();
 
+// returns a promise
+tiddy.top_boobs(5).then(data => console.loh(data)).catch(e => console.error(e));
+
 ```
 ---
 **TODO**

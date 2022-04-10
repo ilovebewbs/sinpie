@@ -1,25 +1,24 @@
 import axios from 'axios';
-class Boobs {
-    // RETURNS BOOBS FROM HOT POSTS
+class Ass {
+    // A METHOD TO RETRIEVE LINKS OF TIDDIES
     // PARAMTERS :
     // num => NUMBER OF LINKS [1-100]
-    async get_boobs(num = 2) {
+    async hot_ass(num = 2) {
         try {
-            let resp = await axios.get(`https://reddit.com/r/boobs/hot.json?limit=${num}`);
+            let resp = await axios.get(`https://reddit.com/r/ass/hot.json?limit=${num}`);
             let stuff = Array.from(resp.data.data.children);
-            let links = stuff.filter(x => x['data']['thumbnail'] !== "self" && x['data']['url'].endsWith(".jpg"));
+            let links = stuff.filter(x => x['data']['thumbnail'] != "self" && x['data']['url'].endsWith(".jpg"));
             return links.map(x => x['data']['url']);
         } catch (e) {
             console.error(e);
         }
-
     }
 
-    // RETURN BOOBS FROM TOP POSTS
-    // PARAMETERS :  num => NUMBER OF LINKS [1-100]
-    async top_boobs(num = 2) {
+    // A METHOD YO RETURN ASS FROM TOP POSTS
+
+    async top_ass(num = 2) {
         try {
-            let resp = await axios.get(`https://reddit.com/r/boobs/top.json?limit=${num}`);
+            let resp = await axios.get(`https://reddit.com/r/ass/top.json?limit=${num}`);
             let stuff = Array.from(resp.data.data.children);
             let links = stuff.filter(x => x['data']['thumbnail'] != "self" && x['data']['url'].endsWith(".jpg"));
             return links.map(x => x['data']['url']);
@@ -28,12 +27,13 @@ class Boobs {
         }
 
     }
+
     // THIS METHODS SENDS PICS TO A DISCORD SERVER VIA WEBOOKS
     // PARAMETERS
     // discord_hook = THE DISCORD WEBHOOK URL
-    async post_boobs(discord_hook) {
+    async send_ass(discord_hook) {
         try {
-            let resp = await axios.get("https://reddit.com/r/boobs/hot.json?limit=100");
+            let resp = await axios.get("https://reddit.com/r/ass/hot.json?limit=100");
             let stuff = Array.from(resp.data.data.children);
             let random = Math.floor(Math.random() * stuff.length);
             let pic = stuff[random]['data']['url'];
@@ -45,7 +45,7 @@ class Boobs {
                     "title": title,
                     "author": {
                         "name": "sinpie",
-                        "url": "https://github.com/ilovebewbs",
+                        "url": "https://github.com/ilovebewbs/sinpie",
                         "icon_url": "https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png"
                     },
                     "image": {
@@ -63,16 +63,16 @@ class Boobs {
 
     }
     // THIS METHOD RETURNS A RANDOM TIDDY
-    async random_boobs() {
+    async random_booty() {
         try {
-            let resp = await axios.get("https://reddit.com/r/boobs.json");
-            let bewbs = Array.from(resp.data.data.children);
+            let resp = await axios.get("https://reddit.com/r/ass.json");
+            let ass = Array.from(resp.data.data.children);
             let random = Math.floor(Math.random() * bewbs.length / 2);
-            return bewbs[random]['data']['url'];
+            return ass[random]['data']['url'];
         } catch (e) {
             console.error(e);
         }
     }
 }
 
-export default Boobs;
+export default Ass;
