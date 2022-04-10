@@ -16,6 +16,22 @@ CUrrently the library can do the following :
 
 ---
 
+**INSTALLATION AND USAGE**
+
+To inatall it just use npm 
+
+`npm install sinpie`
+
+
+Then to actually use just declare an object of a class like 
+
+```
+import Boobs from "sinpie/src/boobs/Boobs.js";
+
+const tiddy = new Boobs();
+
+```
+---
 **TODO**
 
 - IM SUPPORTING ASS SO SOON STAY TUNED
