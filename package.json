@@ -1,6 +1,6 @@
 {
   "name": "sinpie",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "type": "module",
   "description": "A tiny library i made for fun to automate updating your discord server with lewd stuff",
   "main": "index.js",
