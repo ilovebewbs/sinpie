@@ -37,7 +37,7 @@ tiddy.top_boobs(5).then(data => console.loh(data)).catch(e => console.error(e));
 ---
 **TODO**
 
-- IM SUPPORTING ASS SO SOON STAY TUNED
+- ~~IM SUPPORTING ASS SO SOON STAY TUNED~~
 
 - idk might throw in "tiddy of the day" where you get the most upvoted tiddy pic
 
